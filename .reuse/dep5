@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: abap-saas-reference-solution
+Source: https://github.com/sap-software/abap-saas-reference-solution
+
+Files: *
+Copyright: 2023 SAP
+License: SAP Developer License

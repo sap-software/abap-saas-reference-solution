@@ -1,0 +1,24 @@
+_schema-version: '3.1'
+ID: abap-saas-reference-solution-dev
+extends: abap-saas-reference-solution
+
+parameters: 
+  app-domain: ${default-domain}
+  route-prefix: -${appname}
+  appname: saas_test_deployment_dev
+  addon-product-name: /NAMESPC/PRODUCTX
+  addon-product-version: ""
+  provider-admin-email: administrator@example.com
+  saas-display-name: "SaaS Solution (Multitenancy)"
+  saas-description: "ABAP based SaaS solution with an ABAP tenant per subscription"
+  tenant-mode: multi
+  enable-parallel-deployments: true
+  usage-mode: test
+  size-of-runtime: 1
+  size-of-persistence: 2
+  consumer-id-pattern: ([^-]*).*
+  plan-name: ""
+  application-log-level: debug
+  abap-endpoint-timeout: 60000
+  send-x-frame-options: true
+  consumer-tenant-limit: 100
