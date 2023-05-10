@@ -22,3 +22,4 @@ parameters:
   abap-endpoint-timeout: 60000
   send-x-frame-options: true
   consumer-tenant-limit: 100
+  sap-system-name: ""

@@ -25,7 +25,7 @@ parameters:
   abap-endpoint-timeout:
   send-x-frame-options:
   consumer-tenant-limit:
-
+  sap-system-name:
 
 modules:
   - name: approuter
@@ -50,8 +50,8 @@ modules:
       - name: saas-registry
       - name: abap-solution
         parameters:
-            config:
-              abap_endpoint_timeout: ${abap-endpoint-timeout}
+          config:
+            abap_endpoint_timeout: ${abap-endpoint-timeout}
       - name: application-log
 
 resources:
@@ -76,12 +76,12 @@ resources:
           - name: ${appname}-admin
             role-template-references:
               - $XSSERVICENAME(${appname}-abap-solution).SolutionAdmin
-              
+
   - name: saas-registry
     type: org.cloudfoundry.managed-service
     parameters:
       service: saas-registry
-      service-plan: application 
+      service-plan: application
       service-name: saas-registry
       config:
         xsappname: ${appname}
@@ -91,10 +91,10 @@ resources:
           onSubscription: https://cis${route-prefix}.${app-domain}/callback/v1.0/tenants/{tenantId}
         displayName: ${saas-display-name}
         description: ${saas-description}
- 
+
   - name: abap-solution
     type: org.cloudfoundry.managed-service
-    parameters: 
+    parameters:
       service: abap-solution
       service-plan: standard
       service-name: ${appname}-abap-solution
@@ -102,13 +102,14 @@ resources:
         name: ${appname}
         consumer_id_pattern: ${consumer-id-pattern}
         plans:
-        - plan_name: ${plan-name}
-          addon_product_name: ${addon-product-name}
-          size_of_runtime: ${size-of-runtime}
-          size_of_persistence: ${size-of-persistence}
-          provider_admin_email: ${provider-admin-email}
-          consumer_tenant_limit: ${consumer-tenant-limit}
-          usage: ${usage-mode}        
+          - plan_name: ${plan-name}
+            addon_product_name: ${addon-product-name}
+            size_of_runtime: ${size-of-runtime}
+            size_of_persistence: ${size-of-persistence}
+            provider_admin_email: ${provider-admin-email}
+            consumer_tenant_limit: ${consumer-tenant-limit}
+            sap_system_name: ${sap-system-name}
+            usage: ${usage-mode}
         xs-security:
           xsappname: xs-app-${appname}
   - name: application-log
