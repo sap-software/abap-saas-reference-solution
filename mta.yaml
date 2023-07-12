@@ -63,6 +63,9 @@ resources:
       service-plan: application
       service-name: xsuaa
       config:
+        oauth2-configuration:
+          redirect-uris:
+            - "https://*.${app-domain}/**"
         xsappname: ${appname}
         tenant-mode: shared
         scopes:
