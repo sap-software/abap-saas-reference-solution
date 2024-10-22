@@ -11,14 +11,16 @@
 			"target": "/sap/$1",
 			"authenticationType": "xsuaa",
 			"service": "com.sap.cloud.abap.solution",
-			"csrfProtection": false
+			"csrfProtection": false,
+			"endpoint": "abap"
 		},
 		{
 			"source": "^/ui(.*)$",
 			"target": "/ui$1",
 			"authenticationType": "xsuaa",
 			"service": "com.sap.cloud.abap.solution",
-			"csrfProtection": false
+			"csrfProtection": false,
+			"endpoint": "abap"
 		}
 	]
 }

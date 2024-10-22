@@ -1,6 +1,6 @@
 _schema-version: "3.1"
 ID: abap-saas-reference-solution
-version: 1.0.0
+version: 1.0.3
 
 parameters:
   app-domain:
