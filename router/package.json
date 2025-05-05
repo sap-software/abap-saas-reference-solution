@@ -3,8 +3,8 @@
   "version": "1.0.3",
   "description": "This component provides dependency management for ABAP based SaaS Solutions",
   "dependencies": {
-    "@sap/approuter": "^16.8.2",
-    "@sap/asp-middleware": "^1.0.13",
+    "@sap/approuter": "^20.2.0",
+    "@sap/asp-middleware": "^1.0.18",
     "@sap/xsenv": "^4.2.0"
   },
   "scripts": {
