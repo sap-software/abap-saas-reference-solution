@@ -45,6 +45,8 @@ modules:
       SAP_JWT_TRUST_ACL:
         - clientid: "*"
           identityzone: sap-provisioning
+      # according to https://help.sap.com/docs/btp/sap-business-technology-platform/websockets?q=HANDLE_WEBSOCKET_EXT&locale=en-US&version=LATEST
+      HANDLE_WEBSOCKET_EXT: async
     requires:
       - name: xsuaa
       - name: saas-registry
@@ -66,6 +68,8 @@ resources:
         oauth2-configuration:
           redirect-uris:
             - "https://*.${app-domain}/**"
+          credential-types:
+            - binding-secret   
         xsappname: ${appname}
         tenant-mode: shared
         scopes:
