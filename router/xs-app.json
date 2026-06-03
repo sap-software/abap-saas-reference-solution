@@ -22,8 +22,5 @@
 			"csrfProtection": false,
 			"endpoint": "abap"
 		}
-	],
-	"websockets": {
-		"enabled": true
-	}
+	]
 }

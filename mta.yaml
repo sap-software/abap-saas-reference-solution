@@ -29,7 +29,7 @@ parameters:
 
 modules:
   - name: approuter
-    type: javascript.nodejs
+    type: nodejs
     path: router
     parameters:
       keep-existing-routes: true
@@ -47,6 +47,7 @@ modules:
           identityzone: sap-provisioning
       # according to https://help.sap.com/docs/btp/sap-business-technology-platform/websockets?q=HANDLE_WEBSOCKET_EXT&locale=en-US&version=LATEST
       HANDLE_WEBSOCKET_EXT: async
+      CHECK_X_FORWARDED_HOST_IN_LOGIN_CALLBACK: true
     requires:
       - name: xsuaa
       - name: saas-registry
