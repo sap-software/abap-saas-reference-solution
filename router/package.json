@@ -8,7 +8,7 @@
     "@sap/xsenv": "^6.1.0"
   },
   "overrides": {
-    "axios": "^1.13.5",
+    "axios": "^1.16.0",
     "lodash": "^4.17.21"
   },
   "scripts": {
