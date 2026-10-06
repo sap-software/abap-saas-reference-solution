@@ -1,9 +1,9 @@
 {
   "name": "saas-reference-solution",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This component provides dependency management for ABAP based SaaS Solutions",
   "dependencies": {
-    "@sap/approuter": "^23.0.0",
+    "@sap/approuter": "^23.3.0",
     "@sap/asp-middleware": "^1.0.34",
     "@sap/xsenv": "^6.2.1"
   },

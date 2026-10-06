@@ -1,0 +1,7 @@
+.vscode
+.vscode/launch.json
+.DS_Store
+node_modules
+router/node-modules
+mta_archives
+mta-op-*
